@@ -1,8 +1,4 @@
-.grid
-{
-  display: grid;
-  place-items: center;
-}
+
 
 fieldset
 {
@@ -10,4 +6,8 @@ fieldset
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 5px gray;
+}
+.ng-invalid
+{
+  border-color: red;
 }

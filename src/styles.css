@@ -9,4 +9,11 @@ fieldset
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 5px gray;
+  background-color: #f7fbfc;
+}
+
+.grid
+{
+  display: grid;
+  place-items: center;
 }

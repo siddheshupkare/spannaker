@@ -9,37 +9,44 @@ import { Router } from '@angular/router';
   templateUrl: './explore.component.html',
   styleUrls: ['./explore.component.css']
 })
-export class ExploreComponent implements OnInit {
-  data: Exploredata[]=[]
+export class ExploreComponent implements OnInit
+ {
+          data: Exploredata[]=[]
 
-  constructor(private http: HttpClient, private dialog: MatDialog, private router: Router) { }
+          constructor(private http: HttpClient, private dialog: MatDialog, private router: Router) { }
 
-  ngOnInit(): void {
-    this.displayData();
+          ngOnInit(): void
+          {
+            this.displayData();
+          }
 
-  }
 
-  displayData()
-  {
-    this.http.get<any>("https://findfalcone.herokuapp.com/vehicles").subscribe((newData)=>
-    {
-      console.log(newData);
-      this.data=newData
-      console.log(this.data)
-    })
-  }
+        //Getting Data From API
+          displayData()
+          {
+            this.http.get<any>("https://findfalcone.herokuapp.com/vehicles").subscribe((newData)=>
+            {
+              //console.log(newData);
+              this.data=newData
+              //console.log(this.data)
+            })
+          }
 
-openDialog(a: any)
-{
-  const dialogConfig=new MatDialogConfig();
-  this.dialog.open(ModaldataComponent, {
-    data:this.data[a],height: '400px',
-    width: '400px',
-  });
-}
+        //Open Modal
+        openDialog(a: any)
+        {
+          const dialogConfig=new MatDialogConfig();
+          this.dialog.open(ModaldataComponent, {
+            data:this.data[a],height: '400px',
+            width: '400px',
+          });
+        }
 
-logout()
-{
-  this.router.navigate(['login'])
-}
+        //Logging out clearing local storage
+        logout()
+        {
+          localStorage.clear();
+          this.router.navigate(['login'])
+
+        }
 }

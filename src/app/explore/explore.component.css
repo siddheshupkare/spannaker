@@ -9,11 +9,7 @@ body {
   color: #384047;
 }
 
-.grid
-{
-  display: grid;
-  place-items: center;
-}
+
 
 th {
   font-weight: 400;

@@ -1,24 +1,24 @@
 
 <div class="grid">
-  <h1>Login Form</h1>
-  <fieldset>
-<form #regform="ngForm" (ngSubmit)="onSubmit()" class="example-form">
+    <h1>Login Form</h1>
+    <fieldset>
+        <form #loginform="ngForm" (ngSubmit)="onSubmit()" class="example-form" novalidate>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Username</mat-label>
-    <input type="text" matInput placeholder="Ex. alexjohn" name="username" [(ngModel)]="loginData.username" ngModel>
-  </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input type="text" matInput placeholder="Ex. alexjohn" name="username" required [(ngModel)]="loginData.username" ngModel>
+          </mat-form-field>
 
 
-  <mat-form-field appearance="outline">
-    <mat-label>Password</mat-label>
-    <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="loginData.password" ngModel>
-  </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" name="password" required [(ngModel)]="loginData.password" ngModel>
+          </mat-form-field>
 
-  <div>
-    <button mat-raised-button color="primary">Login</button>
-  </div>
+          <div>
+            <button mat-raised-button color="primary" [disabled]="loginform.invalid">Login</button>
+          </div>
 
-</form>
-</fieldset>
+        </form>
+  </fieldset>
 </div>

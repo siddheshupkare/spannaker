@@ -14,9 +14,10 @@ mydata=new regForm("","","","");
   ngOnInit(): void {
   }
 
+  //registering user
   onSubmit()
   {
-    console.log(this.mydata)
+    //console.log(this.mydata)
     localStorage.setItem(this.mydata.username,JSON.stringify(this.mydata))
     window.alert("User Registered")
     this.router.navigate(['login'])
