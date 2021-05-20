@@ -1,0 +1,13 @@
+.grid
+{
+  display: grid;
+  place-items: center;
+}
+
+fieldset
+{
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px gray;
+}

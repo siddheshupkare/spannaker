@@ -1,0 +1,29 @@
+<div class="grid">
+  <h1>Spinnaker Data</h1>
+<table>
+
+  <tr>
+  <th>Name</th>
+  <th>Total Numbers</th>
+  <th>Milege</th>
+  <th>Speed</th>
+</tr>
+
+
+<tr id="myBtn" *ngFor="let item of data; let i=index" (click)="openDialog(i)" >
+  <td >
+    {{item.name}}
+  </td>
+  <td>
+      {{item.total_no}}
+  </td>
+  <td>
+    {{item.max_distance}}
+</td>
+<td>
+  {{item.speed}}
+</td>
+</tr>
+</table>
+<button mat-raised-button color="primary" (click)=logout()>Logout</button>
+</div>

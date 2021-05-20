@@ -1,0 +1,36 @@
+<div class="grid">
+  <h1>Registration Form</h1>
+  <fieldset>
+<form #regform="ngForm" (ngSubmit)="onSubmit()" class="example-form">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput placeholder="Ex. Alex John" name="name" [(ngModel)]="mydata.name" ngModel>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input type="text" matInput placeholder="Ex. alexjohn" name="username" [(ngModel)]="mydata.username" ngModel>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="Ex. pat@example.com" name="email" [(ngModel)]="mydata.email" ngModel>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="mydata.password" ngModel>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+
+    <button mat-raised-button color="primary">Register</button><br><br>
+    <p>Already registered? <a routerLink="login">Click to login</a></p>
+
+</form>
+</fieldset>
+</div>
